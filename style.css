@@ -613,3 +613,358 @@ h1 span {
     margin-top: 10px;
     color: #444;
 }
+
+* GLOBAL STYLES */
+:root {
+    --primary-color: #343a40; /* Warna tombol utama (gelap) */
+    --secondary-color: #ffc107; /* Warna aksen/tombol sekunder (kuning) */
+    --text-color: #495057;
+    --border-color: #e9ecef;
+    --font-family: sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- HEADER / INTRO SECTION STYLES --- */
+.portfolio-intro {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image-placeholder {
+    /* Hanya untuk menunjukkan tempat gambar besar, hilangkan jika tidak digunakan */
+    flex: 1;
+    max-width: 120%;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #212529;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.description {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.features-list .icon {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+    background-color: #212529;
+}
+
+
+/* --- PROJECT CARDS SECTION STYLES (Grid Layout) --- */
+.projects-grid {
+    display: grid;
+    /* Grid 4 kolom pada desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; /* Spasi antar kartu */
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-container {
+    /* Pastikan semua gambar pratinjau memiliki tinggi yang seragam */
+    height: 200px; 
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar menutupi area tanpa terdistorsi */
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1; /* Konten mengisi sisa ruang */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.project-desc {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.project-karya {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.button-secondary {
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: auto; /* Memastikan tombol selalu di bawah */
+    transition: opacity 0.3s;
+}
+
+.button-secondary:hover {
+    opacity: 0.8;
+}
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+
+/* Tablet Layout: 2 kolom */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Layout: 1 kolom */
+@media (max-width: 576px) {
+    .portfolio-intro {
+        flex-direction: column;
+    }
+
+    .intro-image-placeholder {
+        max-width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* GLOBAL STYLES */
+:root {
+    --primary-blue: #007bff; /* Biru yang umum digunakan pada branding */
+    --accent-orange: #ffc107; /* Oranye/Kuning yang digunakan untuk garis bawah dan ikon */
+    --text-color: #343a40;
+    --light-text: #6c757d;
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Latar belakang sedikit abu-abu */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center; /* Mengatur teks header agar rata tengah */
+}
+
+/* --- HEADER STYLES --- */
+.main-header {
+    margin-bottom: 50px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.title-underline {
+    width: 350px; /* Lebar garis bawah */
+    height: 6px;
+    background: linear-gradient(to right, #fff 0%, var(--accent-orange) 50%, #fff 100%); 
+    /* Gradient tipis untuk kesan terpisah, tapi menggunakan warna solid jika ingin meniru garis pada gambar */
+    background-color: var(--accent-orange);
+    margin: 0 auto 10px;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+
+.subtitle {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+/* --- CONTENT SECTION (Flexbox) --- */
+.certification-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Konten dimulai dari atas */
+    gap: 40px;
+    text-align: left; /* Mengembalikan teks ke rata kiri */
+}
+
+.content-column {
+    /* Flex-grow 1 untuk kolom teks, agar mengambil ruang yang tersisa */
+    flex: 1; 
+    padding: 15px;
+}
+
+.image-column {
+    /* Kolom gambar mungkin tidak perlu berkembang sebanyak kolom teks */
+    flex: 0 0 auto; 
+    max-width: 400px; /* Batasi lebar gambar agar proporsional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Agar gambar sejajar dengan teks di sekitarnya */
+}
+
+.cert-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan untuk menonjolkan gambar */
+    transform: rotate(3deg); /* Rotasi sedikit agar terlihat seperti tumpukan foto */
+}
+
+.intro-text {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.category-title {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.cert-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.cert-list .icon {
+    color: var(--accent-orange);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+
+@media (max-width: 992px) {
+    /* Pada tablet, tata letak berubah menjadi gambar di atas, teks di bawah */
+    .certification-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-column {
+        flex: none; /* Hilangkan flex-grow */
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .left-column, .right-column {
+        /* Memastikan teks tetap di tengah saat di layout column */
+        max-width: 600px;
+        text-align: left; /* Teks tetap rata kiri dalam batasnya */
+    }
+    
+    .category-title {
+        text-align: left;
+    }
+
+    .cert-image {
+        transform: none; /* Hilangkan rotasi pada mobile */
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    .title-underline {
+        width: 80%;
+    }
+    .cert-image {
+        max-width: 100%;
+    }
+}
